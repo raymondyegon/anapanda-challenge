@@ -1,11 +1,15 @@
-<div class="main-container">
-  <div class="side-nav">
-    <SideNav />
-  </div>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <SideNav />
+      </div>
+    </nav>
 
-  <div class="row justify-content-md-center">
-    <div class="col-md-6">
+    <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      
       {{outlet}}
+
 
     </div>
   </div>
