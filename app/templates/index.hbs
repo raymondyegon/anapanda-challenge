@@ -1,3 +1,4 @@
+{{!-- 
 <h1>Task List</h1>
 <h4>Pinned Task</h4>
 {{#if this.pinnedTask}}
@@ -31,4 +32,72 @@
   <span class="navbar-text">
     <strong>Completed Tasks:</strong> {{this.completedTasks}}
   </span>
-</nav>
+</nav> --}}
+<div class="m-5">
+
+  <BsTab as |tab|>
+    <tab.pane @title="All Tasks">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <span class="text-muted disabled">
+            Task
+          </span>
+          <span class="text-muted disabled">
+            Actions
+          </span>
+        </div>
+        <hr>
+      </nav>
+      <hr>
+
+
+    </tab.pane>
+
+    <tab.pane @title="Completed Tasks">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <span class="text-muted disabled">
+            Task
+          </span>
+          <span class="text-muted disabled">
+            Actions
+          </span>
+        </div>
+        <hr>
+      </nav>
+      <hr>
+
+      <div class="row">
+
+        <div class="col-1">
+
+          <span class="text-primary">
+            <FaIcon @icon="check-square" />
+          </span>
+        </div>
+        <div class="col-8 align-self-start">
+
+          <strong>Feel Awesome</strong>
+          <br>
+          <span>Accomplishing stuff is the best!</span>
+        </div>
+        <div class="col-1 align-self-end">
+          <span>
+            <FaIcon @icon="thumbtack" />
+          </span>
+        </div>
+        <div class="col-2 align-self-end">
+          <span class="badge badge-success text-wrap">
+            Completed
+          </span>
+        </div>
+
+
+
+      </div>
+      <hr>
+
+    </tab.pane>
+  </BsTab>
+
+</div>
