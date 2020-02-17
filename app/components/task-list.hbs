@@ -1,7 +1,95 @@
-<div class="card">
-  <ul class="list-group list-group-flush">
+<BsTab as |tab|>
+  <tab.pane @title="All Tasks">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <span class="text-muted disabled">
+          Task
+        </span>
+        <span class="text-muted disabled">
+          Actions
+        </span>
+      </div>
+      <hr>
+    </nav>
+    <hr>
+
     {{#each @tasks as |task|}}
-      <SingleTask @task={{task}} />
+      <div class="row">
+
+        <div class="col-1">
+
+          <span class="text-secondary">
+            <FaIcon @icon="check-square" />
+          </span>
+        </div>
+        <div class="col-8 align-self-start">
+
+          <strong> {{task.name}} </strong>
+          <br>
+          <span class="text-muted diabled"> {{task.description}}</span>
+        </div>
+        <div class="col-1 align-self-end">
+          <span>
+            <FaIcon @icon="thumbtack" />
+          </span>
+        </div>
+        <div class="col-2 align-self-end">
+          <span class="badge badge-secondary text-wrap">
+            Done
+          </span>
+        </div>
+
+
+
+      </div>
+      <hr>
     {{/each}}
-  </ul>
-</div>
+
+  </tab.pane>
+
+  <tab.pane @title="Completed Tasks">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <span class="text-muted disabled">
+          Task
+        </span>
+        <span class="text-muted disabled">
+          Actions
+        </span>
+      </div>
+      <hr>
+    </nav>
+    <hr>
+
+    <div class="row">
+
+      <div class="col-1">
+
+        <span class="text-primary">
+          <FaIcon @icon="check-square" />
+        </span>
+      </div>
+      <div class="col-8 align-self-start">
+
+        <strong>Feel Awesome</strong>
+        <br>
+        <span class="text-muted diabled">Accomplishing stuff is the best!</span>
+      </div>
+      <div class="col-1 align-self-end">
+        <span>
+          <FaIcon @icon="thumbtack" />
+        </span>
+      </div>
+      <div class="col-2 align-self-end">
+        <span class="badge badge-success text-wrap">
+          Completed
+        </span>
+      </div>
+
+
+
+    </div>
+    <hr>
+
+  </tab.pane>
+</BsTab>
